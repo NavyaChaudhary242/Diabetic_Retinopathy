@@ -1,0 +1,57 @@
+﻿# =============================================================================
+# .gitignore  -  DR_SIH  |  Explainable AI for Diabetic Retinopathy Screening
+# PS ID 26038
+# =============================================================================
+
+# ── Dataset images (large; tracked via .gitkeep placeholders only) ─────────
+data/APTOS/*
+data/IDRiD/*
+data/DRIVE/*
+data/STARE/*
+data/Messidor/*
+# Keep .gitkeep so folder structure is preserved in the repo
+!data/**/.gitkeep
+
+# ── Trained model weights ──────────────────────────────────────────────────
+models/**/*.mat
+models/**/*.onnx
+models/**/*.pt
+# Keep .gitkeep
+!models/**/.gitkeep
+
+# ── Results artefacts ──────────────────────────────────────────────────────
+results/*.png
+results/*.jpg
+results/*.jpeg
+results/*.tif
+results/*.csv
+results/*.pdf
+results/*.xlsx
+!results/.gitkeep
+
+# ── MATLAB auto-save / backup files ───────────────────────────────────────
+*.asv
+*.autosave
+*.mex*
+
+# ── Simulink generated artefacts ──────────────────────────────────────────
+slprj/
+*.slxc
+*.slxp
+codegen/
+
+# ── OS junk ───────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Editor / IDE config ───────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Python (if any utility scripts added later) ───────────────────────────
+__pycache__/
+*.pyc
+.env
