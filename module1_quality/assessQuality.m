@@ -50,10 +50,13 @@ result.brightnessMean = mean(greenChannel(:));
 result.brightnessStd = std(greenChannel(:));
 
 % Quality thresholds
-if result.sharpness < 50
+% Initial calibration based on real IDRiD fundus-image testing.
+% These values are tunable and are not clinically validated.
+
+if result.sharpness < 5
     result.status = "REJECT";
 
-elseif result.sharpness < 100
+elseif result.sharpness < 30
     result.status = "ENHANCE";
 
 else
